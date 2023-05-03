@@ -45,7 +45,7 @@ Our Github Discuusion for your support , if you have any difficulty, confusion o
 **Add in your project:** 
 
 ```sh 
-npm i sysdesign2023@1.1.8
+npm i sysdesign2023@0.1.8
 ```
 
 **After Install sysdesign2023 you also need to install material for icons:** 
