@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { TreeNode } from 'projects/sys-lib/src/lib/sys-tree/sys-tree.component';
+import { TreeNode } from 'sysdesign2023';
+
 
 @Component({
   selector: 'app-tree-example',
@@ -16,10 +17,10 @@ export class TreeExampleComponent {
         { label: 'Child 1' ,
         children: [
           { label: 'Child 1' , icon: "picture_as_pdf"},
-          { label: 'Child 2' ,
+          { label: 'Click Me',
             children: [
               { label: 'Child 1' , icon: "picture_as_pdf"},
-              { label: 'Child 2' ,
+              { label: 'Child 2' ,action: () =>{ alert("hello")},
                 children: [
                   { label: 'Child 1' , icon: "picture_as_pdf"},
                   { label: 'Child 2' , icon: "picture_as_pdf"},
@@ -85,4 +86,8 @@ export class TreeExampleComponent {
       ]
     },
   ];
+
+  myEvent(){
+    alert("hello");
+  }
 }

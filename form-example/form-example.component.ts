@@ -8,30 +8,15 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class FormExampleComponent {
   myForm: FormGroup;
-  selectedOption: string;
-  myOptions: any[] = [
-    {
-      displayText: "Option 1",
-      value: "Value 1",
-      icon: "home"
-    },
-    {
-      displayText: "Option 2",
-      value: "Value 2",
-      icon: "home"
-    },
-    {
-      displayText: "Option 3",
-      value: "Value 3"
-    }
-  ];
-
-  constructor() {
+  constructor() { }
+  test = "Default Value";
+  ngOnInit(){
     this.myForm = new FormGroup({
-      mySelect: new FormControl('')
+      test: new FormControl(''),
+      test2: new FormControl('Readonly value')
     });
   }
   onSubmit() {
-    console.log(this.myForm.value.mySelect);
+    console.log(this.myForm.getRawValue().test);
   }
 }
